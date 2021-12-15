@@ -1,0 +1,19 @@
+{
+    "name": "Stripe Elements Filler",
+    "description": "A chrome extention to show how to auto fill stripe elements",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "icons": {
+      "16": "./icons/stripe-16.png",
+      "48": "./icons/stripe-48.png",
+      "128": "./icons/stripe-128.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://js.stripe.com/v3/elements-inner-card*"],
+        "all_frames": true,
+        "js": ["content-script.js"]
+      }
+    ],
+    "permissions": ["tabs", "storage"]
+  }
